@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+: ${1?"Indicate which machine to delete"} 
+
+#  Script exits here if command-line parameter absent,
+#+ with following error message.
+#    usage-message.sh: 1: Usage: usage-message.sh ARGUMENT
+
+
+cd $1
+vagrant destroy -f
+cd ..
+rm -rfv $1

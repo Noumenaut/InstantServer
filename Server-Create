@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+filename="machine-`date '+%d%m%Y-%H%M%S'`"
+mkdir $filename
+cd $filename
+cp ../vagrantfiles/vagrantfile-einstein-test Vagrantfile
+echo $filename created.
+vagrant up
